@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pianklauder7.github.io/officialzh-aiyouxi-com-cn/sitemap.xml
