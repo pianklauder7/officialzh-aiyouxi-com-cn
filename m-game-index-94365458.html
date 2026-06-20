@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>PG游戏 · 简明访问指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fbfbfa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1c1c1c;
+      padding: 2rem 1rem 3.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 标题层级 – 极简清晰 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin: 0.8rem 0 0.2rem;
+      line-height: 1.2;
+      color: #111;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5a5a5a;
+      margin-bottom: 1.8rem;
+      border-left: 3px solid #c7c7c7;
+      padding-left: 0.9rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 2.2rem 0 0.9rem;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid #e6e6e6;
+      color: #222;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 1.6rem 0 0.5rem;
+      color: #2e2e2e;
+    }
+
+    p {
+      margin: 0.7rem 0 1rem;
+      color: #3a3a3a;
+    }
+
+    /* 卡片组 – 信息卡片式 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0 0.8rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 18px;
+      padding: 1.4rem 1.5rem 1.6rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .card strong {
+      font-weight: 500;
+      color: #1b1b1b;
+    }
+
+    .card-icon {
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-right: 0.3rem;
+      vertical-align: -2px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f0f0ee;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #3a3a3a;
+      margin: 0.25rem 0.25rem 0.25rem 0;
+    }
+
+    /* 自然链接 – 嵌入句子 */
+    .inline-link {
+      color: #2c5f2d;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #1e441e;
+      text-decoration-thickness: 2px;
+    }
+
+    /* 引用 / 提醒块 */
+    .note-box {
+      background: #f5f5f3;
+      border-left: 4px solid #b8b8b8;
+      padding: 1rem 1.4rem;
+      margin: 1.8rem 0;
+      border-radius: 0 14px 14px 0;
+      font-size: 0.95rem;
+    }
+
+    .note-box strong {
+      font-weight: 500;
+    }
+
+    /* FAQ 摘要（极简） */
+    .faq-item {
+      margin: 0.9rem 0;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      margin-bottom: 0.1rem;
+      color: #1f1f1f;
+    }
+
+    .faq-a {
+      color: #4a4a4a;
+      padding-left: 0.25rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e2e2;
+      margin: 2.4rem 0 1.2rem;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 2.8rem;
+      text-align: center;
+      border-top: 1px solid #ececec;
+      padding-top: 1.5rem;
+    }
+
+    /* 响应式微调 */
+    @media (min-width: 540px) {
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      body {
+        padding: 3rem 2rem 4rem;
+      }
+      h1 {
+        font-size: 2.6rem;
+      }
+    }
+
+    @media (min-width: 780px) {
+      .page {
+        max-width: 740px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>PG游戏：简明访问指引</h1>
+  <div class="subhead">信息卡片式 · 用途 · 人群 · 提醒</div>
+
+  <!-- Hero 式简述 -->
+  <p style="font-size:1.05rem; margin-top:0.2rem;">
+    <a href="https://m-game-pg.com" class="inline-link">PG游戏</a> 是面向移动端的轻量化游戏内容聚合，涵盖多种休闲与策略类型。以下从用途场景、适合人群、访问提示三个维度提供一份简洁参考。
+  </p>
+
+  <!-- 用途卡片 grid -->
+  <h2>常见用途</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">🎲</span>
+      <strong>快速试玩 & 探索</strong>
+      <p style="margin-top: 0.5rem; font-size:0.96rem;">
+        无需复杂注册，通过浏览器即可接触不同风格的 HTML5 游戏，适合在碎片时间切换体验。
+      </p>
+      <span class="tag">零安装</span>
+      <span class="tag">移动优先</span>
+    </div>
+    <div class="card">
+      <span class="card-icon">📋</span>
+      <strong>休闲 & 策略参考</strong>
+      <p style="margin-top: 0.5rem; font-size:0.96rem;">
+        页面内集合多款机制各异的游戏，从反应类到轻度策略，可作为日常消遣或玩法灵感来源。
+      </p>
+      <span class="tag">单局短</span>
+      <span class="tag">变体多</span>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔗</span>
+      <strong>内容索引 & 导航</strong>
+      <p style="margin-top: 0.5rem; font-size:0.96rem;">
+        站点本身类似一个轻量目录，通过分类标签快速定位感兴趣的游戏主题，减少搜索成本。
+      </p>
+      <span class="tag">分类清晰</span>
+    </div>
+    <div class="card">
+      <span class="card-icon">🧩</span>
+      <strong>轻度社交 & 对比</strong>
+      <p style="margin-top: 0.5rem; font-size:0.96rem;">
+        部分游戏支持简单分数记录，适合朋友间非正式切磋或自我挑战，增加反复游玩的动力。
+      </p>
+      <span class="tag">分数对比</span>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <h2>适合人群</h2>
+  <div class="card" style="margin-bottom: 0.8rem;">
+    <p><strong>◈ 休闲玩家</strong> — 希望在通勤、等候等场景下快速打开一局，不追求长时间沉浸。</p>
+    <p><strong>◈ 轻度策略爱好者</strong> — 偏好有限规则内寻找最优解，而非大型复杂系统。</p>
+    <p><strong>◈ 移动端内容探索者</strong> — 习惯通过浏览器直接尝试新内容，不愿为每个小游戏单独安装应用。</p>
+    <p><strong>◈ 游戏设计入门者</strong> — 通过体验多种微型机制，快速了解不同玩法逻辑。</p>
+  </div>
+
+  <!-- 自然链接段落 + 访问提醒 -->
+  <h2>访问提醒与建议</h2>
+  <div class="note-box">
+    <strong>📌 访问前注意</strong><br>
+    • 建议使用最新版 Chrome 或 Safari 浏览器，确保 HTML5 渲染完整。<br>
+    • 页面可能加载外部资源，建议在 Wi-Fi 或稳定网络下首次访问。<br>
+    • 若使用 <a href="https://m-game-pg.com" class="inline-link">PG游戏</a> 时遇到白屏或卡顿，可尝试刷新或清除浏览器缓存。
+  </div>
+
+  <!-- FAQ 摘要 (极简) -->
+  <h2>常见问题 · 摘要</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q：是否需要注册账号？</div>
+    <div class="faq-a">大多数内容无需注册即可直接体验。部分计分或收藏功能可能依赖浏览器本地存储。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：移动端与桌面端体验差异？</div>
+    <div class="faq-a">界面针对触屏优化，但桌面浏览器同样可正常使用。建议竖屏浏览获得最佳布局。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：是否包含内购或广告？</div>
+    <div class="faq-a">该站点主要提供游戏集合，部分第三方游戏可能含广告。具体视单个游戏页面说明而定。</div>
+  </div>
+
+  <!-- 自然引用链接（第二处，嵌入句子） -->
+  <hr>
+  <p style="font-size: 0.97rem;">
+    如果你对轻量级移动端游戏内容感兴趣，可以考虑将 <a href="https://m-game-pg.com" class="inline-link">PG游戏</a> 
+    加入书签，作为日常快速浏览的起点。页面结构偏向索引式，方便按类别筛选。
+  </p>
+
+  <div class="footer-note">
+    © 简明参考 · 信息页 &nbsp;|&nbsp; 内容基于公开资料整理，仅供参考。
+  </div>
+
+</div>
+</body>
+</html>
